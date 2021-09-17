@@ -17,7 +17,7 @@ SUPPORT_MAIL = 'support@yamdb.com'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'default')
 
 DEBUG = os.environ.get('DEBUG', 'False').upper() == 'TRUE'
 
