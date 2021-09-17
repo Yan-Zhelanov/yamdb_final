@@ -7,17 +7,11 @@ from django.utils.crypto import get_random_string
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
-from rest_framework.mixins import (
-    CreateModelMixin,
-    DestroyModelMixin,
-    ListModelMixin
-)
-from rest_framework.permissions import (
-    SAFE_METHODS,
-    AllowAny,
-    IsAuthenticated,
-    IsAuthenticatedOrReadOnly
-)
+from rest_framework.mixins import (CreateModelMixin, DestroyModelMixin,
+                                   ListModelMixin)
+from rest_framework.permissions import (SAFE_METHODS, AllowAny,
+                                        IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
@@ -26,23 +20,14 @@ from rest_framework_simplejwt.tokens import AccessToken
 from api_yamdb.settings import SUPPORT_MAIL
 
 from .filters import TitleFilter
-from .models import Category, User, Genre, Title
-from .permissions import (
-    IsAdmin,
-    IsAdminOrReadOnly,
-    IsAuthorOrModeratorOrAdminOrReadOnly
-)
-from .serializers import (
-    CategoriesSerializer,
-    CommentSerializer,
-    GenresSerializer,
-    GetTokenSerializer,
-    ReviewSerializer,
-    SendEmailSerializer,
-    TitleReadSerializer,
-    TitleWriteSerializer,
-    UserSerializer
-)
+from .models import Category, Genre, Title, User
+from .permissions import (IsAdmin, IsAdminOrReadOnly,
+                          IsAuthorOrModeratorOrAdminOrReadOnly)
+from .serializers import (CategoriesSerializer, CommentSerializer,
+                          GenresSerializer, GetTokenSerializer,
+                          ReviewSerializer, SendEmailSerializer,
+                          TitleReadSerializer, TitleWriteSerializer,
+                          UserSerializer)
 
 GET_TOKEN_INVALID_REQUEST = (
     'O-ops! The user with such data was not found, check the entered data!'

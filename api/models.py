@@ -1,19 +1,9 @@
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db.models import (
-    CASCADE,
-    SET_NULL,
-    CharField,
-    DateTimeField,
-    EmailField,
-    ForeignKey,
-    ManyToManyField,
-    Model,
-    PositiveSmallIntegerField,
-    SlugField,
-    TextField,
-    UniqueConstraint
-)
+from django.db.models import (CASCADE, SET_NULL, CharField, DateTimeField,
+                              EmailField, ForeignKey, ManyToManyField, Model,
+                              PositiveSmallIntegerField, SlugField, TextField,
+                              UniqueConstraint)
 
 from .validators import custom_year_validator
 

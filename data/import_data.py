@@ -3,7 +3,7 @@ import csv
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.utils import IntegrityError
 
-from api.models import Category, Comment, User, Genre, Review, Title
+from api.models import Category, Comment, Genre, Review, Title, User
 
 
 def print_error(error, row, print_error):

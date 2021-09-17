@@ -1,15 +1,10 @@
-from rest_framework.serializers import (
-    CharField,
-    CurrentUserDefault,
-    EmailField,
-    FloatField,
-    ModelSerializer,
-    Serializer,
-    SlugRelatedField
-)
+from rest_framework.serializers import (CharField, CurrentUserDefault,
+                                        EmailField, FloatField,
+                                        ModelSerializer, Serializer,
+                                        SlugRelatedField)
 from rest_framework.validators import ValidationError
 
-from .models import Category, Comment, User, Genre, Review, Title
+from .models import Category, Comment, Genre, Review, Title, User
 
 REVIEW_EXISTS = 'O-ops! Review already exists!'
 

@@ -1,6 +1,6 @@
 from rest_framework.permissions import SAFE_METHODS, BasePermission
 
-from .models import MODERATOR, ADMIN
+from .models import ADMIN, MODERATOR
 
 
 class IsOwner(BasePermission):
